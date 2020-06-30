@@ -1,6 +1,17 @@
 import css from 'styled-jsx/css'
 
 export default css.global`
+  /* Light Mode */
+  :root {
+    --casper-background: #fff;
+    --casper-primary-text: #000;
+  }
+
+  /* Dark Mode */
+  .__casper-dark-mode:root {
+    --casper-background: #000;
+    --casper-primary-text: #fff;
+  }
   html,
   body {
     padding: 0;
@@ -14,8 +25,8 @@ export default css.global`
     box-sizing: border-box;
   }
 
-  /* Light Mode */
-  :root {
-    --casper-background: #fff;
+  body {
+    background: var(--casper-background);
+    color: var(--casper-primary-text);
   }
 `
